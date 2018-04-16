@@ -86,10 +86,11 @@
 <!-- stats -->
 <%= javascript_include_tag "jquery.waypoints.min.js" %>
 <%= javascript_include_tag "jquery.countup.js" %>
-	<script>
-		$('.counter').countUp();
-	</script>
+<script>
+	$('.counter').countUp();
+</script>
 <!-- //stats -->
+
 <!-- start-smoth-scrolling -->
 <%= javascript_include_tag "move-top.js" %>
 <%= javascript_include_tag "jquery.easing.min.js" %>
@@ -102,19 +103,17 @@
 	});
 </script>
 <!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-				};
-			*/
-
-			$().UItoTop({ easingType: 'easeOutQuart' });
-
-			});
-	</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear'
+			};
+		*/
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
 <!-- //here ends scrolling icon -->
