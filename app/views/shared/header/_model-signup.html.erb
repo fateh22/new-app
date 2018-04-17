@@ -9,29 +9,29 @@
 			<div class="modal-body modal-body-sub_agile">
 				<div class="col-md-8 modal_body_left modal_body_left1">
 					<h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
-					<form action="#" method="post">
+					<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 						<div class="styled-input agile-styled-input-top">
 							<input type="text" name="Name" required="">
 							<label>Name</label>
 							<span></span>
 						</div>
 						<div class="styled-input">
-							<input type="email" name="Email" required="">
-							<label>Email</label>
+							<%= f.email_field :email, autofocus: true, autocomplete: "email", required: true %>
+							<%= f.label :email %>
 							<span></span>
 						</div>
 						<div class="styled-input">
-							<input type="password" name="password" required="">
-							<label>Password</label>
+							<%= f.password_field :password, autocomplete: "off", required: true %>
+							<%= f.label :password %>
 							<span></span>
 						</div>
 						<div class="styled-input">
-							<input type="password" name="Confirm Password" required="">
-							<label>Confirm Password</label>
+							<%= f.password_field :password_confirmation, autocomplete: "off", required: true %>
+							<%= f.label :password_confirmation %>
 							<span></span>
 						</div>
-						<input type="submit" value="Sign Up">
-					</form>
+						<%= f.submit "Sign up" %>
+					<% end -%>
 					<%= render 'shared/social' %>
 					<div class="clearfix"></div>
 					<p><a href="#">By clicking register, I agree to your terms</a></p>

@@ -2,8 +2,14 @@
 <div class="header" id="home">
 	<div class="container">
 		<ul>
+			<% if user_signed_in? %>
+				<% current_user.email %>
+        <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      <% else %>
 		  <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
 			<li><a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
+			<% end %>
 			<li><i class="fa fa-phone" aria-hidden="true"></i> Call : +91-98550-23924</li>
 			<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:fatehsingh.sunny5@gmailcom">fatehsingh.sunny5@gmail.com</a></li>
 		</ul>
