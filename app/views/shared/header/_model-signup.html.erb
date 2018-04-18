@@ -9,7 +9,7 @@
 			<div class="modal-body modal-body-sub_agile">
 				<div class="col-md-8 modal_body_left modal_body_left1">
 					<h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
-					<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+					<%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true) do |f| %>
 						<div class="styled-input agile-styled-input-top">
 							<%= f.text_field :name, autofocus: true, required: true %>
 							<%= f.label :name %>

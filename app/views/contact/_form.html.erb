@@ -1,0 +1,23 @@
+<%= form_for :contact, remote: true do |f| %>
+  <div class="styled-input agile-styled-input-top">
+    <%= f.text_field :name, required: true %>
+    <%= f.label :name %>
+    <span></span>
+  </div>
+  <div class="styled-input">
+    <%= f.text_field :email, required: true %>
+    <%= f.label :email %>
+    <span></span>
+  </div>
+  <div class="styled-input">
+    <%= f.text_field :subject, required: true %>
+    <%= f.label :subject %>
+    <span></span>
+  </div>
+  <div class="styled-input">
+    <%= f.text_area :message, required: true %>
+    <%= f.label :message %>
+    <span></span>
+  </div>
+  <%= f.submit 'SEND' %>
+<% end -%>

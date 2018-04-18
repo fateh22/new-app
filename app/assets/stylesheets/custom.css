@@ -1,0 +1,6 @@
+.messages {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  margin-left: 10px;
+}
